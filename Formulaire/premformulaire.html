@@ -14,13 +14,22 @@
             
             <form method="post" action="unscript.php">
                 
-            Entrez votre nom : <input type="text" size="50" name="name"><br><br>
+            <label>Entrez votre nom : <input type="text" size="50" name="name"><br><br></label>
 
-            Entrez votre âge : <input type="number" min="16" max="29" name="age"><br><br>
+            <label>Entrez votre âge : <input type="number" min="16" max="29" name="age"><br><br></label>
+
+            <select id="sexe" name="sexe" required>
+        
+            <option value="F">Féminin</option>
+            <option value="M" type="radio">Masculin</option>
+            
+            <br>
 
             <input type="submit" name="submit">
             
             </form>
+
+        
       
       </body>  
   

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+  <head>
+    
+        <meta charset="UTF-8">
+        <title>Envoi d'un message</title>
+
+  </head>
+  
+        <body>
+            
+        <h1>Ecrire un mail</h1>
+
+        <fieldset>
+            <legend>Votre contact</legend>
+        <label>To : <input type="email" name="to" list="contacts"></label> <br><br>
+        
+        <label>Cc : <input type="email" name="to" list="contacts"></label>
+        </fieldset>
+        
+        <datalist id="contacts">
+        <option value="info@cpnv.ch" label="Informatique">
+        <option value="media@cpnv.ch" label="Médiamatique">
+        <option value="meca@cpnv.ch" label="Mécanique">
+        <option value="help@cpnv.ch" label="Aide">
+        <option value="electronique@cpnv.ch" label="Electronique">
+        </datalist>
+        
+        <br><br>
+        
+        <label>Votre mail : <textarea maxlenght="1" minlenght="150" name="mail" cols="50" rows="10" wrap="hard"></textarea></label>
+        
+        <br><br>
+        
+        <input type="submit" name="submit" value="Envoyer">
+
+        </body>  
+  
+</html>
