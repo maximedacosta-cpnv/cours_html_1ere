@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Mon premier formulaire</title>
+        
+    </head>
+  
+    <body>
+        
+    <!--Pour un formulaire, toujours mettre method="post". Formulaire par défaut = get : passe par l'URL.-->
+    <!--Action : quel script sur le serveur est appelé ?-->
+        <form method="post" action=unscript.php">
+            
+        <br>
+        
+    <!--Saisir le type de l'imput--> <!--Le nom est très important car il désigne au script ce qui a été saisi. Imput = zone ou l'on marque du texte-->
+        Nom d'utilisateur : <input type="text" name="username">
+        
+        <br>
+        
+    <!--Readonly = permet de ne rien pouvoir inscrire dans le champ-->
+        Nom d'utilisateur : <input type="text" readonly="readonly" name="username">
+        
+        <br>
+        
+    <!--required = Champ obligatoire-->
+        Nom d'utilisateur : <input type="text" required="required" name="username">
+        
+        <br>
+        
+    <!--Size = le nombre de caractères prévu-->
+        Nom d'utilisateur : <input type="text" size="40" name="username">
+        
+        <br>
+        
+        
+    <!--Indique à l'utilisateur ce qu'il doit entrer-->
+        Nom d'utilisateur : <input type="text" placeholder="Indiquer votre nom d'utilisateur" name="username">
+        
+        <br>
+        
+    <!--Pour une date où il y a l'obligation de la donner-->
+    <!--Pattern = obligation et indique ce qu'il doit être mis dans le champ-->
+        Date de naissance: <input type="text" pattern="\j\j\-\m\m\-\a\a\a\a\" placeholder="JJ-MM-AAAA" name="birthday">
+        
+        <br>
+        
+    <!--Label : place directement sur le champ-->
+        <label>
+        Date de naissance: <input type="text" placeholder="JJ-MM-AAAA" name="birthday">
+        </label>
+        
+        <br>
+        
+    <!--Pour un label dans un tableau, insérer <label for="inputName" puis insérer un <input id="imputName" type "text">-->
+        
+        <br>
+        
+    <!--Insérer un nombre. MAX : maximum. MIN : minimum. STEP : passer par les flèches 2 par 2 par exemple-->
+        Age : <input type="number" max="98" min="18" step="2" name="age">
+        
+        <br>
+        
+    <!--Pour les mots de passe-->
+        Mot de passe : <input type="password" name="password">
+        
+        <br>
+        
+        
+    <!--Créer un bouton de soumission--> <!--Value = ce qui est écrit sur le bouton-->
+        <input type="submit" name="submit" value="S'inscrire">
+        
+        
+        </form>
+    
+    </body>
+
+  
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Mon premier formulaire</title>
+        
+    </head>
+  
+    <body>
+        
+    <!--Pour un formulaire, toujours mettre method="post". Formulaire par défaut = get : passe par l'URL.-->
+    <!--Action : quel script sur le serveur est appelé ?-->
+        <form method="post" action=unscript.php">
+            
+        <br>
+        
+    <!--Saisir le type de l'imput--> <!--Le nom est très important car il désigne au script ce qui a été saisi. Imput = zone ou l'on marque du texte-->
+        <label>Nom d'utilisateur : <input type="text" name="username"></label>
+        
+        <br>
+        
+    <!--Readonly = permet de ne rien pouvoir inscrire dans le champ-->
+        <label>Nom d'utilisateur : <input type="text" readonly="readonly" name="username"></label>
+        
+        <br>
+        
+    <!--required = Champ obligatoire-->
+        <label>Nom d'utilisateur : <input type="text" required="required" name="username"></label>
+        
+        <br>
+        
+    <!--Size = le nombre de caractères prévu-->
+        <label>Nom d'utilisateur : <input type="text" size="40" name="username"></label>
+        
+        <br>
+        
+        
+    <!--Indique à l'utilisateur ce qu'il doit entrer-->
+        <label>Nom d'utilisateur : <input type="text" placeholder="Indiquer votre nom d'utilisateur" name="username"></label>
+        
+        <br>
+        
+    <!--Pour une date où il y a l'obligation de la donner-->
+    <!--Pattern = obligation et indique ce qu'il doit être mis dans le champ-->
+        <label>Date de naissance: <input type="text" pattern="\j\j\-\m\m\-\a\a\a\a\" placeholder="JJ-MM-AAAA" name="birthday"></label>
+        
+        <br>
+        
+    <!--Label : place directement sur le champ-->
+    
+        <label>Date de naissance: <input type="text" placeholder="JJ-MM-AAAA" name="birthday"></label>
+        
+        <br>
+        
+    <!--Pour un label dans un tableau, insérer <label for="inputName" puis insérer un <input id="imputName" type "text">-->
+        
+        <br>
+        
+    <!--Insérer un nombre. MAX : maximum. MIN : minimum. STEP : passer par les flèches 2 par 2 par exemple-->
+        <label>Age : <input type="number" max="98" min="18" step="2" name="age"></label>
+        
+        <br>
+        
+    <!--Pour les mots de passe-->
+        <label>Mot de passe : <input type="password" name="password"></label>
+        
+        <br>
+        
+    <!--list permet de faire une liste-->
+    
+        <label>To: <input type="email" name="to" list="contacts"></label>
+        
+    <!--Pour créer le recensement de la liste, faire comme ceci-->
+        
+        <datalist id="contacts">
+        <option value="automatique@cpnv.ch" label="La filière automatique">
+        <option value="mediamatique@cpnv.ch" label="La filière médiamatique">
+        <option value="informatique@cpnv.ch" label="La filière informatique">
+        </datalist>
+        
+        <br>
+        
+    <!--Niveau permet de faire un bouton de contrôle pour le volume par exemple-->
+    <!--Step permet d'indiquer le nombre de possibilité dans la ligne, par exemple 1 par 1 jusqu'à 10-->
+    
+        <label>Niveau : <input type="range" name="a" list="a-values" step="10"</label>
+        
+        <br>
+        
+    <!--Pour permettre d'entrer n'importe quel texte avec des retours à la ligne par exemple, on utilise text area-->
+    <!--Maxlenght : maximum -->
+    <!--Cols : nombre de colonnes-->
+    <!--Rows : nombre de lignes-->
+    <!--WRAP : remet à la ligne automatiquement : "hard"=envoi au serveur avec des ajouts de retours à la ligne en les insérant-->
+    <!--WRAP : remet à la ligne automatiquement : "soft"=envoi au serveur en une seule ligne, sans retour à ligne ajoutés automatiquement-->
+    
+        <label>Votre SMS : <textarea maxlenght="140" minlenght="10" name="sms" cols="50" rows="6" wrap="hard"></textarea></label>
+        
+        <br>
+        
+    <!--Un champ select permet de choisir selon une liste proposée-->
+    <!--Attribut required oblige l'utilisateur à sélectionner un choix-->
+    <!--Selected = par défaut-->
+    
+        Origine :<select id="country" name="country" required>
+        
+        <option value=" ">Sélectionnez un pays</option>
+        <option value="FR">France</option>
+        <option value="CH">Suisse</option>
+        <option value="PL">Pologne</option>
+        
+        </select>
+        
+        <br>
+        
+    <!--L'attribut multiple du select permet de choisir plusieurs entrées. Obligé d'ajouter les crochets !-->
+    
+        <label for="artist">Sélectionnez un artiste</label>
+        
+        <select id="artist" name="artist[]" multiple>
+        <option value="1">Moogai</option>
+        <option value="2">Salut</option>
+        <option value="3">Hello Paris</option>
+        
+        </select>
+        
+        <br>
+        <br>
+        
+    <!--fieldset permet d'encadrer plusieurs choses ensemble-->
+    <!--Legend permet d'afficher un titre au cadre-->
+    
+        <fieldset>
+            <legend>Choix du pays</legend>
+            <select id="Pays" name="animal[]" multiple>
+            <option value="FR">France</option>
+            <option value="CH">Suisse</option>
+            <option value="PL">Pologne</option>
+            <option value="PT">Portugal</option>
+            </select>
+        </fieldset>   
+        
+        <br>
+        
+        
+        <!--Bouton radio (sélectionner grâce à un bouton)-->
+    
+        <label>Féminin <input type="radio" value="F" name="sexe"></label>
+        <label>Masculin <input type="radio" value ="M" name="sexe"></label>
+        
+        <br>
+                
+    <!--Créer un bouton de soumission--> <!--Value = ce qui est écrit sur le bouton-->
+        <input type="submit" name="submit" value="S'inscrire">
+        
+        <br>
+        
+            
+        
+        </form>
+    
+    </body>
+
+  
+</html>
