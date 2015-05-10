@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+  <head>
+    
+        <meta charset="UTF-8">
+        <title>Formulaire d'enregistrement pour Miss Gateau de l'espace</title>
+
+  </head>
+  
+        <body>
+            
+        <h1>Formulaire d'enregistrement pour Miss Gâteau de l'Espace</h1>
+            
+        <form method="post" action=unscript.php">
+    
+        <!--Détails personnels-->
+        <fieldset>
+            <legend>Détails personnels</legend>
+            <br>
+            <label>Prénom : <input type="text" placeholder="Prénom uniquement" name="prénom"></label>
+            <br>
+            <br>
+            <label>Nom : <input type="text" placeholder="Nom uniquement" name="nom"></label>
+            <br>
+            <br>
+            <label>Date de naissance : <input type="text" name="naissance"></label>
+            <br>
+            <br>
+            <label>Email : <input type="text" placeholder="exemple@domaine.com" name="mail"></label>
+            <br>
+            <br>
+            <label>URL : <input type="text" placeholder="http://monsite.com" name="url"></label>
+            <br>
+            <br>
+            <label>Téléphone : <input type="text" placeholder="ex. : 0264651554" name="téléphone"></label>
+            <br>
+            <br>
+            <label>Taille de chaussure: <input type="number" min="20" max="50" name="chaussure"></label>
+            <br>
+            <br>
+            <label>Niveau de vol (min. 1 / max. 100): <input type="range" name="niveauvol" min="1" max ="100" list="a-values" step="1"</label>
+            <br>
+        </fieldset>
+        
+            <br>
+            
+        <!--Détails de l'adresse-->
+        <fieldset>   
+            <legend>Adresse</legend>
+            <label>Adresse : <textarea  minlenght="10" name="adresse" cols="30" rows="2" wrap="hard"></textarea></label>
+            <br>
+            <br>
+            <label>Code postal : <input type="number" max="6" min="3" name="npa"></label>
+            <br>
+            <br>
+            <label>Pays: <input type="text" name="pays"></label>
+        </fieldset>
+            <br>
+            <br>
+        
+        <!--Détails de la carte-->
+                
+        <fieldset>   
+            <legend>Détails de la carte</legend
+            <br>
+              
+            <!--Type de carte-->
+            <fieldset>   
+                <legend>Type de carte</legend>
+                            
+                <select id="typecarte" name="typecarte" required>
+                    
+                <option value=" ">Sélectionnez votre carte</option>
+                <option value="VISA">VISA</option>
+                <option value="Mc">Mastercard</option>
+                <option value="AMEX">AMEX</option>
+                
+                </select>
+            </fieldset> 
+                            
+        <!--Détails de la carte en plus-->
+              
+            <br>
+            <br>
+            <label>Nom : <input type="text" placeholder="Comment votre nom apparaît sur la carte name="nomcarte"></label>
+            <br>
+            <br>
+            <label>Numéro de carte : <input type="number" name="numéro de carte"></label>
+            <br>
+            <br>
+            <label>Code de sécurité : <input type="number" name="code sécurité"></label>
+            <br>
+            <br>
+            <label>Date d'expiration : <input type="date" name="expiration"></label>
+            </fieldset>
+            
+        <!--Envoyer-->
+        
+        
+            <br>
+            <br>
+            <fieldset>   
+            <input type="submit" name="submit">
+            </select>
+            </fieldset>  
+        </body>  
+  
+</html>
